@@ -1,10 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+Clase ListaEquipos para la entrega 2
  */
 package tpentrega2;
-//TP GRUPO 1 ENTREGA 2
-//IMPORTAMOS LOS ELEMENTOS PARA DECLARAR ARRAY LISTS
 
 import java.io.File;
 import java.io.IOException;
@@ -12,93 +9,50 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-/**
- *
- * @author GRUPO 1
- */
 public class ListaEquipos {
-    //Declaro coleccion de Equipos
-    //List palabra reservada para crear Listas
-    //Equipo.java
-    //caracteristicas de Equipo delcarado en Java Class
+    // atributo
     private List<Equipo> equipos;
     private String equiposCSV;
-    
-    //Constructor 1
-     public ListaEquipos(List<Equipo> equipos, String equiposCSV) {
+
+    public ListaEquipos(List<Equipo> equipos, String equiposCSV) {
         this.equipos = equipos;
         this.equiposCSV = equiposCSV;
     }
-      
-    //Constructor por defecto
+    
     public ListaEquipos() {
         this.equipos = new ArrayList<Equipo>();
         this.equiposCSV = "equipos.csv";
     }
-    
-    //Constructor getEquipos
+
     public List<Equipo> getEquipos() {
         return equipos;
     }
 
-    //Constructor setEquipos
     public void setEquipos(List<Equipo> equipos) {
         this.equipos = equipos;
     }
-    
-     public String getEquiposCSV() {
+
+    public String getEquiposCSV() {
         return equiposCSV;
     }
-     
+
     public void setEquiposCSV(String equiposCSV) {
         this.equiposCSV = equiposCSV;
     }
     
-    
-    //Metodo para agregar equipos a la lista
-       public void addEquipo(Equipo e) {
+    // add y remove elementos
+    public void addEquipo(Equipo e) {
         this.equipos.add(e);
     }
-    
-     //Metodo para remover equipos a la lista
-     public void removeEquipo(Equipo e) {
+    public void removeEquipo(Equipo e) {
         this.equipos.remove(e);
     }
-    
-    
-    /***
-     * Este método devuelve un Equipo (o null) buscandolo por idEquipo
-     * @param idEquipo Identificador del equipo deseado
-     * @return Objeto Equipo (o null si no se encuentra)
-     */
-    public Equipo getEquipo (int idEquipo) {
-        // Defini un objeto de tipo Equipo en dónde va a ir mi resultado
-        // Inicialmente es null, ya que no he encontrado el equipo que 
-        // buscaba todavía.
-        Equipo encontrado = null;
-        // Recorro la lista de equipos que está cargada
-        for (Equipo eq : this.getEquipos()) {
-            // Para cada equipo obtengo el valor del ID y lo comparo con el que
-            // estoy buscando
-            if (eq.getIdEquipo() == idEquipo) {
-                // Si lo encuentro (son iguales) lo asigno como valor de encontrado
-                encontrado = eq;
-                // Y hago un break para salir del ciclo ya que no hace falta seguir buscando
-                break;
-            }
-        }
-        // Una vez fuera del ciclo retorno el equipo, pueden pasar dos cosas:
-        // 1- Lo encontré en el ciclo, entonces encontrado tiene el objeto encontrado
-        // 2- No lo encontré en el ciclo, entonces conserva el valor null del principio
-        return encontrado;
-    }
- 
+
     @Override
     public String toString() {
         return "ListaEquipos{" + "equipos=" + equipos + '}';
     }
-    
-    //Metodo para recorrer la toda la coleccion de equipos
+
     public String listar() {
         String lista = "";
         for (Equipo equipo: equipos) {
@@ -106,7 +60,7 @@ public class ListaEquipos {
         }           
         return lista;
     }
-   
+    
     // cargar desde el archivo
     public void cargarDeArchivo() {
         // para las lineas del archivo csv
@@ -118,14 +72,13 @@ public class ListaEquipos {
         int fila = 0;
        
         try { 
-            Scanner sc = new Scanner(new File(this.getEquiposCSV()));
+            Scanner sc = new Scanner(new File("./Equipos.csv"));
             sc.useDelimiter("\n");   //setea el separador de los datos
                 
             while (sc.hasNext()) {
                 // levanta los datos de cada linea
                 datosEquipo = sc.next();
-                // Descomentar si se quiere mostrar cada línea leída desde el archivo
-                // System.out.println(datosEquipo);  //muestra los datos levantados 
+                System.out.println(datosEquipo);  //muestra los datos levantados 
                 fila ++;
                 // si es la cabecera la descarto y no se considera para armar el listado
                 if (fila == 1)
@@ -154,4 +107,3 @@ public class ListaEquipos {
     }
 
 }
-
