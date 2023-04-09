@@ -9,6 +9,7 @@ package tpentrega2;
  * @author mcasatti
  */
 public class Partido {
+    private int idPartido;
     private Equipo equipo1;
     private Equipo equipo2;
     private int golesEquipo1;
@@ -18,7 +19,8 @@ public class Partido {
         
     }
     
-    public Partido(Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2) {
+    public Partido(int idPartido, Equipo equipo1, Equipo equipo2, int golesEquipo1, int golesEquipo2) {
+        this.idPartido = idPartido;
         this.equipo1 = equipo1;
         this.equipo2 = equipo2;
         this.golesEquipo1 = golesEquipo1;

@@ -9,6 +9,7 @@ package tpentrega2;
  * @author mcasatti
  */
 public class Pronostico {
+    private int idPronostico;
     private Equipo equipo;
     private Partido partido;
     private char Resultado;
@@ -17,7 +18,8 @@ public class Pronostico {
         
     }
 
-    public Pronostico(Equipo equipo, Partido partido, char Resultado) {
+    public Pronostico(int idPronostico,Equipo equipo, Partido partido, char Resultado) {
+        this.idPronostico = idPronostico;
         this.equipo = equipo;
         this.partido = partido;
         this.Resultado = Resultado;

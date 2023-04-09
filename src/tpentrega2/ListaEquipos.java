@@ -21,7 +21,7 @@ public class ListaEquipos {
     
     public ListaEquipos() {
         this.equipos = new ArrayList<Equipo>();
-        this.equiposCSV = "equipos.csv";
+        this.equiposCSV = System.getProperty("user.dir")+"/src/tpentrega2/equipos.csv";
     }
 
     public List<Equipo> getEquipos() {
@@ -68,6 +68,7 @@ public class ListaEquipos {
                 // Y hago un break para salir del ciclo ya que no hace falta seguir buscando
                 break;
             }
+            
         }
         // Una vez fuera del ciclo retorno el equipo, pueden pasar dos cosas:
         // 1- Lo encontré en el ciclo, entonces encontrado tiene el objeto encontrado
@@ -82,7 +83,7 @@ public class ListaEquipos {
 
     public String listar() {
         String lista = "";
-        for (Equipo equipo: equipos) {
+         for (Equipo equipo: equipos) {
             lista += "\n" + equipo;
         }           
         return lista;
