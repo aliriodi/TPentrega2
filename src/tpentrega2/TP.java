@@ -30,16 +30,16 @@ public class TP {
         
         System.out.println ("cargando ARCHIVO Lista Participantes");
         PRODE3.cargarDeArchivo();
-         System.out.println ("Mostranbdo Lista Participantes");
-        System.out.println(PRODE3.listar());
+     //    System.out.println ("Mostranbdo Lista Participantes");
+     //   System.out.println(PRODE3.listar());
         
-        System.out.println ("cargando ARCHIVO Lista Participantes");
-        PRODE4.cargarDeArchivo();
-         System.out.println ("Mostranbdo Lista Participantes");
-        System.out.println(PRODE4.listar());
+     //   System.out.println ("cargando ARCHIVO Lista Participantes");
+     //   PRODE4.cargarDeArchivo();
+     //    System.out.println ("Mostranbdo Lista Participantes");
+     //   System.out.println(PRODE4.listar());
         
         
-        //PRODE.play();
+        PRODE.play();
     }
     
 }

@@ -47,6 +47,16 @@ public class Partido {
         return golesEquipo1;
     }
 
+    public int getIdPartido() {
+        return idPartido;
+    }
+
+    public void setIdPartido(int idPartido) {
+        this.idPartido = idPartido;
+    }
+    
+    
+
     public void setGolesEquipo1(int golesEquipo1) {
         this.golesEquipo1 = golesEquipo1;
     }

@@ -132,7 +132,10 @@ public class ListaPronosticos {
                 
                 // crea el objeto en memoria
                 // idPronostico Equipo Partido Resultado
-                pronostico = new Pronostico(idPronostico, LISTAEQUIPOS.getEquipo(idEquipo),null/*LISTAPARTIDOS.getPartido(idPartido)*/,Resultado);
+                pronostico = new Pronostico(idPronostico, 
+                                      LISTAEQUIPOS.getEquipo(idEquipo),
+                                      null/*LISTAPARTIDOS.getPartido(idPartido)*/,
+                                            Resultado);
                 
                 // llama al metodo add para grabar el equipo en la lista en memoria
                 this.addPronostico(pronostico);
