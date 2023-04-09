@@ -58,6 +58,8 @@ public class ListaParticipantes {
     public void removeParticipante(Participante p) {
         this.participantes.remove(p);
     }
+    
+    
      
      /***
      * Este método devuelve un Participante (o null) buscandolo por 

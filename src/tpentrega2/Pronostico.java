@@ -18,13 +18,13 @@ public class Pronostico {
         
     }
 
-    public Pronostico(int idPronostico,Equipo equipo, Partido partido, char Resultado) {
+    public Pronostico(int idPronostico, Equipo equipo, Partido partido, char Resultado) {
         this.idPronostico = idPronostico;
         this.equipo = equipo;
         this.partido = partido;
         this.Resultado = Resultado;
     }
-
+   
     public Equipo getEquipo() {
         return equipo;
     }
@@ -48,13 +48,24 @@ public class Pronostico {
     public void setResultado(char Resultado) {
         this.Resultado = Resultado;
     }
+
+    public int getIdPronostico() {
+        return idPronostico;
+    }
+  
     
+    /*
     public String toString() {
         String res = "\nApuesto a que en el partido:\n"+
                 this.getPartido()+
                 this.getEquipo().getNombre()+" obtiene el siguiente Resultado: "+
                 this.getResultado()+"\n";
         return res;
+    }*/
+
+    @Override
+    public String toString() {
+        return "Pronostico{" + "idPronostico=" + idPronostico + ", equipo=" + equipo + ", partido=" + partido + ", Resultado=" + Resultado + '}';
     }
     
 }
