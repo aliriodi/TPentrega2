@@ -78,5 +78,26 @@ public class Pronostico {
         return "Pronostico{" + "idPronostico=" + idPronostico + ", idParticipante=" + idParticipante + ", equipo=" + equipo + ", partido=" + partido + ", Resultado=" + Resultado + '}';
     }
 
-   
+    public int puntos() {
+        int val = 0;
+        if(partido.getEquipo1()==equipo && partido.getGolesEquipo1()>partido.getGolesEquipo2()
+                                        && getResultado() == 'G')
+        {val =1;}
+        if(partido.getEquipo1()==equipo && partido.getGolesEquipo2()>partido.getGolesEquipo1()
+                                        && getResultado() == 'P')
+        {val =1;}
+        if(partido.getEquipo2()==equipo && partido.getGolesEquipo2()>partido.getGolesEquipo1()
+                                        && getResultado() == 'G')
+        {val =1;}
+        if(partido.getEquipo2()==equipo && partido.getGolesEquipo1()>partido.getGolesEquipo2()
+                                        && getResultado() == 'P')
+        {val =1;}
+        if(partido.getGolesEquipo1()== partido.getGolesEquipo2()
+                                        && getResultado() == 'E')
+        {val =1;}
+        return val;
+        
+            
+    }
 }
+

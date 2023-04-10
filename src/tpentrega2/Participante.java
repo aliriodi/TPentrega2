@@ -56,5 +56,14 @@ public class Participante {
     }
     setPronosticos(p);
     }
+    
+    // Calculando los puntos de las salidas de los particpantes
+    public int resultados() {
+        int salida = 0;
+    for(Pronostico pronostico: getPronosticos().getPronosticos()) {
+       salida = salida + pronostico.puntos();
+    }
+    return  salida;
+    }
 }
 

@@ -40,7 +40,12 @@ public class PronosticoDeportivo {
         }
         
         System.out.println("Los participantes cargados son: " + participantes.listar());
-  
+           System.out.println( "Nombre               " + "Puntos");
+       for(Participante participante : participantes.getParticipantes()) {
+        
+        System.out.println(  participante.getNombre()+"         "+participante.resultados());
+
+    }
 
         // agregar y/o modificar el codigo que quieran
         
