@@ -21,22 +21,23 @@ public class TP {
         PRODE4 = new ListaPronosticos();
         LISTAPARTIDOS = new ListaPartidos();
         
+
         
-        System.out.println ("cargando ARCHIVO Lista Equipos");
+   //     System.out.println ("cargando ARCHIVO Lista Equipos");
         LISTAEQUIPOS.cargarDeArchivo();
         LISTAPARTIDOS.cargarDeArchivo(LISTAEQUIPOS);
-        System.out.println ("Mostranbdo Lista");
-        System.out.println(LISTAEQUIPOS.listar());
+  //      System.out.println ("Mostranbdo Lista");
+  //      System.out.println(LISTAEQUIPOS.listar());
         
               
-        System.out.println ("cargando ARCHIVO Lista Participantes");
+ //       System.out.println ("cargando ARCHIVO Lista Participantes");
         PRODE3.cargarDeArchivo();
-         System.out.println ("Mostranbdo Lista Participantes");
-       System.out.println(PRODE3.listar());
+ //      System.out.println ("Mostranbdo Lista Participantes");
+ //      System.out.println(PRODE3.listar());
         
-         System.out.println ("cargando ARCHIVO Lista Participantes");
+   //      System.out.println ("cargando ARCHIVO Lista Participantes");
         PRODE4.cargarDeArchivo();
-         System.out.println ("Mostranbdo Lista Participantes");
+   //      System.out.println ("Mostranbdo Lista Participantes");
         System.out.println(PRODE4.listar());
         
         

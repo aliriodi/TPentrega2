@@ -12,7 +12,8 @@ public class Participante {
     private int idParticipante;
     private String nombre;
     private ListaPronosticos pronosticos;
-
+    public static ListaPronosticos p;
+    
     public Participante() {
         
     }
@@ -48,8 +49,12 @@ public class Participante {
         return "Participante{" + "idParticipante=" + idParticipante + ", nombre=" + nombre + ", pronosticos=" + pronosticos + '}';
     }
         
-    public void cargarPronosticos(ListaEquipos equipos, ListaPartidos partidos){
-    
-}
+    public void cargarPronosticos(ListaPronosticos pronosticos){
+       p = new ListaPronosticos();
+    for(Pronostico pronostico : pronosticos.getPronosticos()){
+    if(pronostico.getIdParticipante()== idParticipante) {p.addPronostico(pronostico);}
+    }
+    setPronosticos(p);
+    }
 }
 
