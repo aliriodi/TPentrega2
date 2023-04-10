@@ -11,13 +11,13 @@ package tpentrega2;
 public class Participante {
     private int idParticipante;
     private String nombre;
-    private Pronostico[] pronosticos;
+    private ListaPronosticos pronosticos;
 
     public Participante() {
         
     }
     
-    public Participante(int idParticipante, String nombre, Pronostico[] pronosticos) {
+    public Participante(int idParticipante, String nombre, ListaPronosticos pronosticos) {
         this.idParticipante = idParticipante;
         this.nombre = nombre;
         this.pronosticos = pronosticos;
@@ -35,11 +35,11 @@ public class Participante {
         return idParticipante;
     }
      
-    public Pronostico[] getPronosticos() {
+    public ListaPronosticos getPronosticos() {
         return pronosticos;
     }
 
-    public void setPronosticos(Pronostico[] pronosticos) {
+    public void setPronosticos(ListaPronosticos pronosticos) {
         this.pronosticos = pronosticos;
     }
 
@@ -48,6 +48,8 @@ public class Participante {
         return "Participante{" + "idParticipante=" + idParticipante + ", nombre=" + nombre + ", pronosticos=" + pronosticos + '}';
     }
         
-
+    public void cargarPronosticos(ListaEquipos equipos, ListaPartidos partidos){
+    
+}
 }
 

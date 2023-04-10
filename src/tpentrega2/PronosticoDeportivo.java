@@ -30,7 +30,7 @@ public class PronosticoDeportivo {
         partidos.cargarDeArchivo(equipos);
         System.out.println("Los partidos cargados son: " + partidos.listar());
 
-/*        
+      
         
         participantes.cargarDeArchivo();
         // Una vez cargados los participantes, para cada uno de ellos
@@ -41,7 +41,7 @@ public class PronosticoDeportivo {
         
         System.out.println("Los participantes cargados son: " + participantes.listar());
   
-*/
+
         // agregar y/o modificar el codigo que quieran
         
     }    

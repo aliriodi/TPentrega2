@@ -10,6 +10,7 @@ package tpentrega2;
  */
 public class Pronostico {
     private int idPronostico;
+    private int idParticipante; 
     private Equipo equipo;
     private Partido partido;
     private char Resultado;
@@ -18,8 +19,9 @@ public class Pronostico {
         
     }
 
-    public Pronostico(int idPronostico, Equipo equipo, Partido partido, char Resultado) {
+    public Pronostico(int idPronostico, int idParticipante, Equipo equipo, Partido partido, char Resultado) {
         this.idPronostico = idPronostico;
+        this.idParticipante = idParticipante;
         this.equipo = equipo;
         this.partido = partido;
         this.Resultado = Resultado;
@@ -45,6 +47,14 @@ public class Pronostico {
         return Resultado;
     }
 
+    public int getIdParticipante() {
+        return idParticipante;
+    }
+
+    public void setIdParticipante(int idParticipante) {
+        this.idParticipante = idParticipante;
+    }
+
     public void setResultado(char Resultado) {
         this.Resultado = Resultado;
     }
@@ -65,7 +75,8 @@ public class Pronostico {
 
     @Override
     public String toString() {
-        return "Pronostico{" + "idPronostico=" + idPronostico + ", equipo=" + equipo + ", partido=" + partido + ", Resultado=" + Resultado + '}';
+        return "Pronostico{" + "idPronostico=" + idPronostico + ", idParticipante=" + idParticipante + ", equipo=" + equipo + ", partido=" + partido + ", Resultado=" + Resultado + '}';
     }
-    
+
+   
 }

@@ -13,6 +13,7 @@ import java.util.List;
 //import java.util.Objects;
 import java.util.Scanner;
 import static tpentrega2.TP.LISTAEQUIPOS;
+import static tpentrega2.TP.LISTAPARTIDOS;
 
 /**
  *
@@ -132,9 +133,9 @@ public class ListaPronosticos {
                 
                 // crea el objeto en memoria
                 // idPronostico Equipo Partido Resultado
-                pronostico = new Pronostico(idPronostico, 
+                pronostico = new Pronostico(idPronostico, idParticipante,
                                       LISTAEQUIPOS.getEquipo(idEquipo),
-                                      null/*LISTAPARTIDOS.getPartido(idPartido)*/,
+                                      LISTAPARTIDOS.getPartido(idPartido),
                                             Resultado);
                 
                 // llama al metodo add para grabar el equipo en la lista en memoria

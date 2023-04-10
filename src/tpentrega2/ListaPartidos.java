@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import static tpentrega2.TP.LISTAEQUIPOS;
+
 /**
  *
  * @author Grupo1
@@ -81,7 +81,7 @@ public class ListaPartidos {
     }
     
      // cargar desde el archivo
-    public void cargarDeArchivo() {
+    public void cargarDeArchivo(ListaEquipos equipos) {
         // para las lineas del archivo csv
         String datosPartido;
         // para los datos individuales de cada linea
@@ -115,12 +115,16 @@ public class ListaPartidos {
                 int idEquipo2 = Integer.parseInt(vectorPartido[2]);
                 int GolesEquipo1 = Integer.parseInt(vectorPartido[3]);
                 int GolesEquipo2 = Integer.parseInt(vectorPartido[4]);
-                
+               
+                if(equipos.getEquipo(idEquipo1)!= null && 
+                   equipos.getEquipo(idEquipo2)!= null){
                 // crea el objeto en memoria
-                partido = new Partido(idPartido, LISTAEQUIPOS.getEquipo(idEquipo1), LISTAEQUIPOS.getEquipo(idEquipo2),GolesEquipo1,GolesEquipo2);
+                partido = new Partido(idPartido, equipos.getEquipo(idEquipo1), equipos.getEquipo(idEquipo2),GolesEquipo1,GolesEquipo2);
                 
                 // llama al metodo add para grabar el equipo en la lista en memoria
                 this.addPartido(partido);
+                }
+                
             }
             //closes the scanner
         } catch (IOException ex) {
