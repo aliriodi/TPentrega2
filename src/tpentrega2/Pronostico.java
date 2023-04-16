@@ -28,7 +28,7 @@ public class Pronostico {
     }
    
     public Equipo getEquipo() {
-        return equipo;
+          return equipo;
     }
 
     public void setEquipo(Equipo equipo) {
@@ -80,6 +80,12 @@ public class Pronostico {
 
     public int puntos() {
         int val = 0;
+        if(equipo.getIdEquipo()==1)
+        {equipo=partido.getEquipo1();}
+        
+        if(equipo.getIdEquipo()==2)
+        {equipo=partido.getEquipo2();}
+        
         if(partido.getEquipo1()==equipo && partido.getGolesEquipo1()>partido.getGolesEquipo2()
                                         && getResultado() == 'G')
         {val =1;}
@@ -95,6 +101,8 @@ public class Pronostico {
         if(partido.getGolesEquipo1()== partido.getGolesEquipo2()
                                         && getResultado() == 'E')
         {val =1;}
+        
+       // System.out.println(equipo);
         return val;
         
             
